@@ -1,0 +1,15 @@
+t = 0:0.001:1;
+f = 5;
+x = sin(2*pi*f*t);
+fs = 20;
+n = 0:1/fs:1;
+xs = sin(2*pi*f*n);
+plot(t,x,'b-');
+hold on;
+stem(n,xs,'r','filled');
+hold off;
+xlabel('Time (s)');
+ylabel('Amplitude');
+title('Sampling of Analog Signal');
+legend('Analog','Sampled');
+grid on;
